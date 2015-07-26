@@ -8,4 +8,4 @@ curl -s https://raw.githubusercontent.com/finalduty/git/master/configs/.bashrc >
 curl -s https://raw.githubusercontent.com/finalduty/git/master/configs/.vimrc > /root/.vimrc; \
 curl -s https://raw.githubusercontent.com/finalduty/docker-centos7/master/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
 
-RUN yum install -qy epel-release vim; yum update -qy
+RUN yum install -q -y epel-release vim; yum update -q -y
