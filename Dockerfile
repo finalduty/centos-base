@@ -4,8 +4,8 @@ FROM centos:7
 MAINTAINER "FinalDuty" finalduty@github.com
 
 RUN \
-curl -s https://raw.githubusercontent.com/finalduty/git/master/configs/.bashrc > /root/.bashrc; \
-curl -s https://raw.githubusercontent.com/finalduty/git/master/configs/.vimrc > /root/.vimrc; \
+curl -s https://raw.githubusercontent.com/finalduty/configs/master/.bashrc > /root/.bashrc; \
+curl -s https://raw.githubusercontent.com/finalduty/configs/master/.vimrc > /root/.vimrc; \
 curl -s https://raw.githubusercontent.com/finalduty/docker-centos7/master/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
 
 RUN yum install -q -y epel-release vim; yum update -q -y
