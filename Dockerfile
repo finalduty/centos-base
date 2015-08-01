@@ -1,11 +1,11 @@
-### andy@webdrive.co.nz [rev: 9102058]
+### andy.dustin@gmail.com [rev: 9115680]
 ## Docker file for CentOS 7
 FROM centos:7
-MAINTAINER "FinalDuty" finalduty@github.com
+MAINTAINER "FinalDuty" <andy.dustin@gmail.com>
 
 RUN \
-curl -s https://raw.githubusercontent.com/finalduty/configs/master/.bashrc > /root/.bashrc; \
-curl -s https://raw.githubusercontent.com/finalduty/configs/master/.vimrc > /root/.vimrc; \
-curl -s https://raw.githubusercontent.com/finalduty/docker-centos7/master/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
+  curl -s https://raw.githubusercontent.com/finalduty/configs/master/.bashrc > /root/.bashrc; \
+  curl -s https://raw.githubusercontent.com/finalduty/configs/master/.vimrc > /root/.vimrc; \
+  curl -s https://raw.githubusercontent.com/finalduty/docker-centos7/master/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
 
-RUN yum install -q -y epel-release vim; yum update -q -y
+RUN yum update -q -y && yum install -q -y epel-release vim
