@@ -1,5 +1,6 @@
-### andy.dustin@gmail.com [rev: 9115680]
-## Docker file for CentOS 7
+### andy.dustin@gmail.com [rev: 918d119]
+## Docker file for CentOS 7 Base Image
+
 FROM centos:7
 MAINTAINER "FinalDuty" <andy.dustin@gmail.com>
 
