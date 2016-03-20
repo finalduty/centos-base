@@ -1,5 +1,5 @@
 ### finalduty@github.com [rev: 995a294]
-## Docker file for CentOS 7
+## Docker file for CentOS 7 Base Image
 FROM centos:7
 MAINTAINER "FinalDuty" <andy.dustin@gmail.com>
 
