@@ -1,9 +1,8 @@
 FROM centos:latest
 MAINTAINER "FinalDuty" <root@finalduty.me>
 
-RUN \
-  curl -s https://raw.githubusercontent.com/finalduty/configs/master/.bashrc > /root/.bashrc; \
-  curl -s https://raw.githubusercontent.com/finalduty/configs/master/.vimrc > /root/.vimrc; \
-  curl -s https://raw.githubusercontent.com/finalduty/docker-centos/master/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
+ADD https://raw.githubusercontent.com/finalduty/configs/master/.bashrc /root/
+ADD https://raw.githubusercontent.com/finalduty/configs/master/.vimrc /root/
 
-RUN yum install -q -y centos-release epel-release vim
+RUN yum install dnf dnf-plugins-core; yum clean all -q -y
+RUN dnf install -y centos-release epel-release bash-completion vim; dnf clean all -q -y
